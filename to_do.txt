@@ -1,0 +1,30 @@
+
+Preparation Topics
+
+Data Structures and Algorithms -
+    AlgoExpert.io - 65 Questions
+    LeetCode - 
+        Top 100 Interview Questions
+        Top 100 Liked Questions
+
+System Design Interviews
+    Gaurav Sen
+    Success in Tech
+    Tech Dummies
+    Educative.io
+
+DBMS 
+    GeeksforGeeks
+
+OS
+    GeeksforGeeks
+
+Python
+    Design Patterns
+
+Go
+    Basics
+
+Daily Practice -
+    2 - 4  AlgoExpert.io Questions
+    2 - 3 dbms topics 

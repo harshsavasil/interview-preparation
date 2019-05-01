@@ -1,0 +1,32 @@
+i: 1, i2: 0, i3: 0, i5: 0, value: 2
+i: 2, i2: 1, i3: 0, i5: 0, value: 3
+i: 3, i2: 1, i3: 1, i5: 0, value: 4
+i: 4, i2: 2, i3: 1, i5: 0, value: 5
+i: 5, i2: 2, i3: 1, i5: 1, value: 6
+i: 6, i2: 3, i3: 1, i5: 1, value: 6
+i: 7, i2: 3, i3: 2, i5: 1, value: 8
+i: 8, i2: 4, i3: 2, i5: 1, value: 9
+i: 9, i2: 4, i3: 3, i5: 1, value: 10
+1, 2, 3, 4, 5, 6, 6, 8, 9, 10, 
+ans : 10
+i: 1, i2: 0, i3: 0, i5: 0, value: 2
+i: 2, i2: 1, i3: 0, i5: 0, value: 3
+i: 3, i2: 1, i3: 1, i5: 0, value: 4
+i: 4, i2: 2, i3: 1, i5: 0, value: 5
+i: 5, i2: 2, i3: 1, i5: 1, value: 6
+i: 6, i2: 3, i3: 1, i5: 1, value: 6
+i: 7, i2: 3, i3: 2, i5: 1, value: 8
+i: 8, i2: 4, i3: 2, i5: 1, value: 9
+i: 9, i2: 4, i3: 3, i5: 1, value: 10
+i: 10, i2: 5, i3: 3, i5: 1, value: 10
+1, 2, 3, 4, 5, 6, 6, 8, 9, 10, 10, 
+ans : 10
+1, 
+ans : 1
+i: 1, i2: 0, i3: 0, i5: 0, value: 2
+1, 2, 
+ans : 2
+i: 1, i2: 0, i3: 0, i5: 0, value: 2
+i: 2, i2: 1, i3: 0, i5: 0, value: 3
+1, 2, 3, 
+ans : 3

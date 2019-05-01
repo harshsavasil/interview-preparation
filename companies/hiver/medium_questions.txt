@@ -1,0 +1,14 @@
+What are the features of OS? | 5
+What is the use of stub in Operating Systems? | 5
+What are the shared memory spaces of threads? | 6
+What is the difference between program and thread? | 5
+What is the relationship between operating systems and computer hardware? | 6
+How Buffering can improve the performance of a Computer system? | 5
+What is the Difference between a Job and a Process? | 8
+What are the advantages of multiprogramming? | 6
+What are the advantages of Multiprocessing or Parallel System? | 6
+What do you mean by system calls? | 5
+What is the use of inter process communication? | 5
+What is the difference between RPC and IPC? | 7
+State the advantages of multiprocessor system? Explain. | 6
+How can the user disturb the normal operation of the system? | 8

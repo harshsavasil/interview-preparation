@@ -1,0 +1,20 @@
+Explain various allocation algorithms. | 2
+When does a page fault occur? Explain various page replacement strategies/algorithms. | 3
+What is a process scheduler? State the characteristicsof a good process scheduler? | 3
+What is scheduling? What criteria affects the schedulers performance? | 3
+Explain time slicing. How its duration affects the overall working of the system. | 2
+What is Shortest Remaining Time, SRT scheduling? | 3
+What is Highest Response Ratio Next (HRN) Scheduling? | 3
+What are the different principles which must be considered while selection of a scheduling algorithm? | 3
+Explain pseudo parallelism? | 2
+Explain semophores and write a short note on it. | 3
+What is the kernel? | 3
+What are real time operating system? | 2
+What are batch systems ? | 2
+What is graceful degradation? | 3
+What are privileged instruction? | 2
+What is a process? | 2
+What is a scheduler? | 2
+What is the use of job queues? | 2
+What is meant by context switch? | 3
+What is co-operative process? | 3

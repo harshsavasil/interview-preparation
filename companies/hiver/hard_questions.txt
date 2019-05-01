@@ -1,0 +1,10 @@
+What are the different operating systems? Explain. | 10
+What is difference between micro kernel and macro kernel? | 10
+Distinguish between Monolithic Architecture and Microservices. | 10
+Explain the advantages and disadvantages of using Monolithic architecture. | 15
+Explain the advantages and disadvantages of using Microservices architecture. | 15
+What is a deadlock and how can it be prevented? | 10
+What are the different states of a process? Explain. | 15
+What is starvation and aging? | 10
+What is process synchronization and how is it achieved? | 20
+What is virtual memory and thrashing? | 10
