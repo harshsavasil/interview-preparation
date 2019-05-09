@@ -1,0 +1,1 @@
+Total Water Trapped using precomputation: 10
