@@ -26,7 +26,7 @@ int droppedRequests(vector<int> requestTime)
         }
         else
         {
-            if (current.first - lastTenSecond.front() > 9)
+            while (current.first - lastTenSecond.front() > 9)
             {
                 lastTenSecondCount -= requestCount[lastTenSecond.front()];
                 lastTenSecond.pop();
@@ -41,7 +41,7 @@ int droppedRequests(vector<int> requestTime)
         }
         else
         {
-            if (current.first - lastTenSecond.front() > 59)
+            while (current.first - lastTenSecond.front() > 59)
             {
                 lastMinuteCount -= requestCount[lastMinute.front()];
                 lastMinute.pop();
