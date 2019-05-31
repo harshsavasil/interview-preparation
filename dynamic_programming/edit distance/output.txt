@@ -1,0 +1,3 @@
+Edit Distance between geek and gesek is 1
+Edit Distance between cat and cut is 1
+Edit Distance between sunday and saturday is 3
