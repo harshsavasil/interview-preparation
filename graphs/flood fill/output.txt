@@ -1,0 +1,22 @@
+Screen Color Representation before Painting : 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 0 0 
+1 0 0 1 1 0 1 1 
+1 2 2 2 2 0 1 0 
+1 1 1 2 2 0 1 0 
+1 1 1 2 2 2 2 0 
+1 1 1 1 1 2 1 1 
+1 1 1 1 1 2 2 1 
+
+Flood Fill is called on (4, 4)
+New Color Code : 3
+Screen Color Representation after Painting : 
+1 1 1 1 1 1 1 1 
+1 1 1 1 1 1 0 0 
+1 0 0 1 1 0 1 1 
+1 3 3 3 3 0 1 0 
+1 1 1 3 3 0 1 0 
+1 1 1 3 3 3 3 0 
+1 1 1 1 1 3 1 1 
+1 1 1 1 1 3 3 1 
+
