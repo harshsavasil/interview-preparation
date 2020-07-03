@@ -1,3 +1,6 @@
+from queue import Queue 
+import sys
+
 class Node:
     def __init__(self, key, value):
         self.key = key
@@ -9,7 +12,7 @@ class _BinarySearchTreeInterator:
     def __init__ (self, root, size):
         self._theKeys = [None] * size
         self._curItem = 0
-        self._bstTraversal(root)
+        self._bstPostOrderTraversal(root)
         self._curItem = 0
 
     def __iter__(self):
@@ -23,15 +26,52 @@ class _BinarySearchTreeInterator:
         else:
             raise StopIteration
     
-    def _bstTraversal(self, subtree):
+    def _bstInorderTraversal(self, subtree):
         """
         Performs an inorder traversal used to build the array of keys.
         """
         if subtree is not None:
-            self._bstTraversal(subtree.left)
+            self._bstInorderTraversal(subtree.left)
             self._theKeys[self._curItem] = subtree.key
             self._curItem += 1
-            self._bstTraversal(subtree.right)
+            self._bstInorderTraversal(subtree.right)
+    
+    def _bstPreOrderTraversal(self, subtree):
+        """
+        Performs an inorder traversal used to build the array of keys.
+        """
+        if subtree is not None:
+            self._theKeys[self._curItem] = subtree.key
+            self._curItem += 1
+            self._bstPreOrderTraversal(subtree.left)
+            self._bstPreOrderTraversal(subtree.right)
+    
+    def _bstPostOrderTraversal(self, subtree):
+        """
+        Performs an inorder traversal used to build the array of keys.
+        """
+        if subtree is not None:
+            self._bstPostOrderTraversal(subtree.left)
+            self._bstPostOrderTraversal(subtree.right)
+            self._theKeys[self._curItem] = subtree.key
+            self._curItem += 1
+    
+    def _bstLevelOrderTraversal(self, subtree):
+        """
+        Performs a level order traversal used to build the array of keys.
+        """
+        if subtree is not None:
+            bfsQueue = Queue(maxsize = len(self._theKeys))
+            bfsQueue.put(subtree)
+            while not bfsQueue.empty():
+                current = bfsQueue.get()
+                print(current.key)
+                self._theKeys[self._curItem] = current.key
+                self._curItem += 1
+                if current.left is not None:
+                    bfsQueue.put(current.left)
+                if current.right is not None:
+                    bfsQueue.put(current.right)
 
 
 class BinarySearchTree:
@@ -126,7 +166,42 @@ class BinarySearchTree:
                 subtree.value = successor.value
                 subtree.right = self._bstRemove(subtree.right, successor.key)
                 return subtree
-            
+    
+    def getTreeHeight(self):
+        return self._getHeightOfSubtree(self._root)
+    
+    def _getHeightOfSubtree(self, subtree):
+        if subtree is None:
+            return -1
+        if subtree.left is None and subtree.right is None:
+            return 0
+        return 1 + max(self._getHeightOfSubtree(subtree.left), self._getHeightOfSubtree(subtree.right))
+    
+    def isBinarySearchTree(self):
+        return self._isBinarySearchTreeHelper(self._root, -sys.maxsize, sys.maxsize)
+    
+    def _isBinarySearchTreeHelper(self, subtree, minV, maxV):
+        if subtree is None:
+            return True
+        if subtree.key < minV or subtree.key >= maxV:
+            return False
+        return self._isBinarySearchTreeHelper(subtree.left, minV, subtree.key) and self._isBinarySearchTreeHelper(subtree.right, subtree.key, maxV)
+    
+    def getInorderSuccessor(self, key):
+        subtree = self._root
+        inorderSuccessor = None
+        targetNode = self._bstSearch(subtree, key)
+        if targetNode.right is not None:
+            return self._bstMinimum(targetNode.right)
+        else:
+            ancestor = self._root
+            while ancestor != targetNode:
+                if ancestor.key > targetNode.key:
+                    inorderSuccessor = ancestor
+                    ancestor = ancestor.left
+                else:
+                    ancestor = ancestor.right
+        return inorderSuccessor
 
 
 bst = BinarySearchTree()
@@ -138,10 +213,10 @@ bst.add(9, 17)
 bst.add(10, 13)
 bst.add(8, 13)
 
-# for key in bst:
-#     print(key, bst.valueOf(key))
-
-bst.remove(9)
-
 for key in bst:
     print(key, bst.valueOf(key))
+
+# print(bst.getTreeHeight())
+# print(bst.isBinarySearchTree())
+print(bst.getInorderSuccessor(8).key)
+
