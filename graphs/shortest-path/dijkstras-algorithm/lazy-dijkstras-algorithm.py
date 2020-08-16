@@ -24,6 +24,9 @@ if __name__ == '__main__':
         visited[current] = True
         if shortest_distance[current] < min_distance:  # added optimization 1
             continue
+        # added optimization 3 - No need to look further as we have found the end node.
+        if current == end_node:
+            break
         for neighbor, distance in directed_graph[current]:
             if visited[neighbor]:  # added optimization 2
                 continue
@@ -32,6 +35,4 @@ if __name__ == '__main__':
                 previous_node[neighbor] = current
                 shortest_distance[neighbor] = new_distance
                 heappush(min_heap, (new_distance, neighbor))
-        if current == end_node:  # added optimization 3 - No need to look further
-            break
     print(shortest_distance, previous_node)
